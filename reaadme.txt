@@ -1,0 +1,12 @@
+first use server.js to generate keypoints. just need to replace img.src
+then manually copy paste keypoints into canvas.html according to comments ie: left hip to left knee
+
+uncomment this in canvas.html to have skeleton overlaid on top of image
+// var img = document.getElementById("scream");
+// ctx.drawImage(img, 10, 10);
+
+also in canvas.html, adjust the height and width of the canvas according to the yellow numbers printed out by server.js
+
+
+
+works well on webcam image

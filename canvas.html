@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <script type="application/javascript">
+    function draw() {
+      var canvas = document.getElementById('canvas');
+      if (canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+
+        // var img = document.getElementById("scream");
+        // ctx.drawImage(img, 10, 10);
+
+        // left hip to left knee
+        ctx.beginPath();
+        ctx.moveTo(594.9927400287828, 327.7620014391447);
+        ctx.lineTo(580.1476408305921, 478.2258686266447);
+        ctx.closePath();
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = "blue";
+        ctx.stroke();
+
+        // left knee to left ankle
+        ctx.beginPath();
+        ctx.moveTo(580.1476408305921, 478.2258686266447);
+        ctx.lineTo(548.4050549958881, 632.8867701480262);
+        ctx.closePath();
+        ctx.stroke();
+
+        // right hip to right knee
+        ctx.beginPath();
+        ctx.moveTo(517.7156147203947, 307.7296528063322);
+        ctx.lineTo(452.60151110197364, 396.0979260896381);
+        ctx.closePath();
+        ctx.stroke();
+
+        // left hip to right hip
+        ctx.beginPath();
+        ctx.moveTo(594.9927400287828, 327.7620014391447);
+        ctx.lineTo(517.7156147203947, 307.7296528063322);
+        ctx.closePath();
+        ctx.stroke();
+
+
+        // right knee to right ankle
+        ctx.beginPath();
+        ctx.moveTo(452.60151110197364, 396.0979260896381);
+        ctx.lineTo(499.6025968852796, 543.8245271381578);
+        ctx.closePath();
+        ctx.stroke();
+
+
+        // left shoulder to left elbow
+        ctx.beginPath();
+        ctx.moveTo(634.2262027138157,169.76495040090458);
+        ctx.lineTo(713.6811266447368,127.99698679070724);
+        ctx.closePath();
+        ctx.stroke();
+
+        // left shoulder to left hip
+        ctx.beginPath();
+        ctx.moveTo(634.2262027138157, 169.76495040090458);
+        ctx.lineTo(594.9927400287828, 327.7620014391447);
+        ctx.closePath();
+    
+
+        ctx.stroke();
+
+        // left shoulder to right shoulder
+        ctx.beginPath();
+        ctx.moveTo(634.2262027138157, 169.76495040090458);
+        ctx.lineTo(542.7144582648026, 150.40720086348682);
+        ctx.closePath();
+        ctx.stroke();
+
+
+        // // right shoulder to right elbow
+        ctx.beginPath();
+        ctx.moveTo(542.7144582648026,150.40720086348682);
+        ctx.lineTo(473.63339072779604,103.99526495682562);
+        ctx.closePath();
+        ctx.stroke();
+
+        // right shoulder to right hip
+        ctx.beginPath();
+        ctx.moveTo(542.7144582648026, 150.40720086348682);
+        ctx.lineTo(517.7156147203947, 307.7296528063322);
+        ctx.closePath();
+        ctx.stroke();
+
+        // right elbow to right wrist
+        ctx.beginPath();
+        ctx.moveTo(473.63339072779604,103.99526495682562);
+        ctx.lineTo(519.1156005859375,41.64120322779604);
+        ctx.closePath();
+        ctx.stroke();
+
+        // left elbow to left wrist
+        ctx.beginPath();
+        ctx.moveTo(713.6811266447368,127.99698679070724);
+        ctx.lineTo(530.6711939761512,40.94810084292763);
+        ctx.closePath();
+        ctx.stroke();
+
+        
+
+
+
+// leftElbow: (137.21190739979286,170.17829213876706)
+// rightElbow: (27.897231668989093,172.81631981327288)
+// leftWrist: (131.24269767300194,115.03626142654271)
+// leftHip: (103.95598877429032,110.94796333536071)
+// rightHip: (102.1957205908108,110.87069467169036)
+// leftKnee: (133.59815143191094,137.4365009508635)
+// rightKnee: (72.32627038788377,132.2720113832351)
+// leftAnkle: (145.0331510131122,208.31944497984057)
+// rightAnkle: (145.21926540798611,211.17670611703142)
+      }
+    }
+  </script>
+ </head>
+ <body onload="draw();">
+    <!-- <img id="scream" src="please.jpg" alt="The Scream" width="0" height="0"> -->
+   <canvas id="canvas" width="1080" height="720"></canvas>
+ </body>
+</html>
