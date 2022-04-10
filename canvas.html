@@ -4,17 +4,37 @@
   <meta charset="utf-8"/>
   <script type="application/javascript">
     function draw() {
+
+        const ref = {
+            nose: [227.9814388877467,73.74709279913651],
+    lefteye: [231.0845947265625,70.11050575657893],
+    righteye: [217.5311439915707,70.00714753803453],
+    leftear: [230.17957185444078,76.934814453125],
+    rightear: [212.77273077713815,73.89752839740953],
+    leftshoulder: [248.33179674650492,94.730224609375],
+    rightshoulder: [205.14571340460526,88.71720163445724],
+    leftelbow: [278.0068166632401,90.86464329769734],
+    rightelbow: [183.59400699013156,62.43310225637333],
+    leftwrist: [270.02377158717104,61.47099545127466],
+    rightwrist: [197.8896131013569,55.84887052837169],
+    lefthip: [230.36935906661182,172.4823319284539],
+    righthip: [202.55796733655427,166.99369731702302],
+    leftknee: [221.64027163856906,214.91712068256578],
+    rightknee: [196.99912623355263,208.38292172080588],
+    leftankle: [223.8008037366365,240.52882144325656],
+    rightankle: [204.40121299342104,232.5291041324013],
+        }
       var canvas = document.getElementById('canvas');
       if (canvas.getContext) {
         var ctx = canvas.getContext('2d');
 
-        // var img = document.getElementById("scream");
-        // ctx.drawImage(img, 10, 10);
+        var img = document.getElementById("scream");
+        ctx.drawImage(img, 10, 10);
 
         // left hip to left knee
         ctx.beginPath();
-        ctx.moveTo(594.9927400287828, 327.7620014391447);
-        ctx.lineTo(580.1476408305921, 478.2258686266447);
+        ctx.moveTo(ref["lefthip"][0], ref["lefthip"][1]);
+        ctx.lineTo(ref["leftknee"][0], ref["leftknee"][1]);
         ctx.closePath();
         ctx.lineWidth = 3;
         ctx.strokeStyle = "blue";
@@ -22,45 +42,46 @@
 
         // left knee to left ankle
         ctx.beginPath();
-        ctx.moveTo(580.1476408305921, 478.2258686266447);
-        ctx.lineTo(548.4050549958881, 632.8867701480262);
+        ctx.moveTo(ref["leftknee"][0], ref["leftknee"][1]);
+        ctx.lineTo(ref["leftankle"][0], ref["leftankle"][1]);
+
         ctx.closePath();
         ctx.stroke();
 
         // right hip to right knee
         ctx.beginPath();
-        ctx.moveTo(517.7156147203947, 307.7296528063322);
-        ctx.lineTo(452.60151110197364, 396.0979260896381);
+        ctx.moveTo(ref["righthip"][0], ref["righthip"][1]);
+        ctx.lineTo(ref["rightknee"][0], ref["rightknee"][1]);
         ctx.closePath();
         ctx.stroke();
 
         // left hip to right hip
         ctx.beginPath();
-        ctx.moveTo(594.9927400287828, 327.7620014391447);
-        ctx.lineTo(517.7156147203947, 307.7296528063322);
+        ctx.moveTo(ref["lefthip"][0], ref["lefthip"][1]);
+        ctx.lineTo(ref["righthip"][0], ref["righthip"][1]);
         ctx.closePath();
         ctx.stroke();
 
 
         // right knee to right ankle
         ctx.beginPath();
-        ctx.moveTo(452.60151110197364, 396.0979260896381);
-        ctx.lineTo(499.6025968852796, 543.8245271381578);
+        ctx.moveTo(ref["rightknee"][0], ref["rightknee"][1]);
+        ctx.lineTo(ref["rightankle"][0], ref["rightankle"][1]);
         ctx.closePath();
         ctx.stroke();
 
 
         // left shoulder to left elbow
         ctx.beginPath();
-        ctx.moveTo(634.2262027138157,169.76495040090458);
-        ctx.lineTo(713.6811266447368,127.99698679070724);
+        ctx.moveTo(ref["leftshoulder"][0], ref["leftshoulder"][1]);
+        ctx.lineTo(ref["leftelbow"][0], ref["leftelbow"][1]);
         ctx.closePath();
         ctx.stroke();
 
         // left shoulder to left hip
         ctx.beginPath();
-        ctx.moveTo(634.2262027138157, 169.76495040090458);
-        ctx.lineTo(594.9927400287828, 327.7620014391447);
+        ctx.moveTo(ref["leftshoulder"][0], ref["leftshoulder"][1]);
+        ctx.lineTo(ref["lefthip"][0], ref["lefthip"][1]);
         ctx.closePath();
     
 
@@ -68,37 +89,37 @@
 
         // left shoulder to right shoulder
         ctx.beginPath();
-        ctx.moveTo(634.2262027138157, 169.76495040090458);
-        ctx.lineTo(542.7144582648026, 150.40720086348682);
+        ctx.moveTo(ref["leftshoulder"][0], ref["leftshoulder"][1]);
+        ctx.lineTo(ref["rightshoulder"][0], ref["rightshoulder"][1]);
         ctx.closePath();
         ctx.stroke();
 
 
         // // right shoulder to right elbow
         ctx.beginPath();
-        ctx.moveTo(542.7144582648026,150.40720086348682);
-        ctx.lineTo(473.63339072779604,103.99526495682562);
+        ctx.moveTo(ref["rightshoulder"][0], ref["rightshoulder"][1]);
+        ctx.lineTo(ref["rightelbow"][0], ref["rightelbow"][1]);
         ctx.closePath();
         ctx.stroke();
 
         // right shoulder to right hip
         ctx.beginPath();
-        ctx.moveTo(542.7144582648026, 150.40720086348682);
-        ctx.lineTo(517.7156147203947, 307.7296528063322);
+        ctx.moveTo(ref["rightshoulder"][0], ref["rightshoulder"][1]);
+        ctx.lineTo(ref["righthip"][0], ref["righthip"][1]);
         ctx.closePath();
         ctx.stroke();
 
         // right elbow to right wrist
         ctx.beginPath();
-        ctx.moveTo(473.63339072779604,103.99526495682562);
-        ctx.lineTo(519.1156005859375,41.64120322779604);
+        ctx.moveTo(ref["righteblow"][0], ref["righteblow"][1]);
+        ctx.lineTo(ref["rightwrist"][0], ref["rightwrist"][1]);
         ctx.closePath();
         ctx.stroke();
 
         // left elbow to left wrist
         ctx.beginPath();
-        ctx.moveTo(713.6811266447368,127.99698679070724);
-        ctx.lineTo(530.6711939761512,40.94810084292763);
+        ctx.moveTo(ref["leftelbow"][0], ref["leftelbow"][1]);
+        ctx.lineTo(ref["leftwrist"][0], ref["leftwrist"][1]);
         ctx.closePath();
         ctx.stroke();
 
@@ -120,7 +141,7 @@
   </script>
  </head>
  <body onload="draw();">
-    <!-- <img id="scream" src="please.jpg" alt="The Scream" width="0" height="0"> -->
+    <img id="scream" src="please.jpg" alt="The Scream" width="0" height="0">
    <canvas id="canvas" width="1080" height="720"></canvas>
  </body>
 </html>
