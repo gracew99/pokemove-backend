@@ -6,23 +6,23 @@
     function draw() {
 
         const ref = {
-            nose: [227.9814388877467,73.74709279913651],
-    lefteye: [231.0845947265625,70.11050575657893],
-    righteye: [217.5311439915707,70.00714753803453],
-    leftear: [230.17957185444078,76.934814453125],
-    rightear: [212.77273077713815,73.89752839740953],
-    leftshoulder: [248.33179674650492,94.730224609375],
-    rightshoulder: [205.14571340460526,88.71720163445724],
-    leftelbow: [278.0068166632401,90.86464329769734],
-    rightelbow: [183.59400699013156,62.43310225637333],
-    leftwrist: [270.02377158717104,61.47099545127466],
-    rightwrist: [197.8896131013569,55.84887052837169],
-    lefthip: [230.36935906661182,172.4823319284539],
-    righthip: [202.55796733655427,166.99369731702302],
-    leftknee: [221.64027163856906,214.91712068256578],
-    rightknee: [196.99912623355263,208.38292172080588],
-    leftankle: [223.8008037366365,240.52882144325656],
-    rightankle: [204.40121299342104,232.5291041324013],
+          nose: [ 228.12885485197367, 76.86785246196547 ],
+    leftEye: [ 230.24174740439966, 71.19359066611841 ],
+    rightEye: [ 225.32920435855263, 72.94176603618419 ],
+    leftEar: [ 237.18936317845393, 70.08567408511513 ],
+    rightEar: [ 208.45091167249177, 73.13577752364307 ],
+    leftShoulder: [ 246.6487041272615, 92.48644377055922 ],
+    rightShoulder: [ 205.44015984786182, 98.26859323601974 ],
+    leftElbow: [ 290.0695158305921, 100.13218929893088 ],
+    rightElbow: [ 150.9707256116365, 105.90913471422698 ],
+    leftWrist: [ 346.03107653166114, 114.60924650493422 ],
+    rightWrist: [ 89.1465357730263, 131.3029078433388 ],
+    leftHip: [ 214.18119731702302, 174.95679353412828 ],
+    rightHip: [ 202.45732357627466, 170.70929276315786 ],
+    leftKnee: [ 281.3408138877467, 182.54715768914474 ],
+    rightKnee: [ 227.8098016036184, 246.51344700863484 ],
+    leftAnkle: [ 389.64800382915294, 191.36725174753286 ],
+    rightAnkle: [ 211.35710063733552, 321.7229260896381 ]
         }
       var canvas = document.getElementById('canvas');
       if (canvas.getContext) {
@@ -33,8 +33,8 @@
 
         // left hip to left knee
         ctx.beginPath();
-        ctx.moveTo(ref["lefthip"][0], ref["lefthip"][1]);
-        ctx.lineTo(ref["leftknee"][0], ref["leftknee"][1]);
+        ctx.moveTo(ref["leftHip"][0], ref["leftHip"][1]);
+        ctx.lineTo(ref["leftKnee"][0], ref["leftKnee"][1]);
         ctx.closePath();
         ctx.lineWidth = 3;
         ctx.strokeStyle = "blue";
@@ -42,46 +42,46 @@
 
         // left knee to left ankle
         ctx.beginPath();
-        ctx.moveTo(ref["leftknee"][0], ref["leftknee"][1]);
-        ctx.lineTo(ref["leftankle"][0], ref["leftankle"][1]);
+        ctx.moveTo(ref["leftKnee"][0], ref["leftKnee"][1]);
+        ctx.lineTo(ref["leftAnkle"][0], ref["leftAnkle"][1]);
 
         ctx.closePath();
         ctx.stroke();
 
         // right hip to right knee
         ctx.beginPath();
-        ctx.moveTo(ref["righthip"][0], ref["righthip"][1]);
-        ctx.lineTo(ref["rightknee"][0], ref["rightknee"][1]);
+        ctx.moveTo(ref["rightHip"][0], ref["rightHip"][1]);
+        ctx.lineTo(ref["rightKnee"][0], ref["rightKnee"][1]);
         ctx.closePath();
         ctx.stroke();
 
         // left hip to right hip
         ctx.beginPath();
-        ctx.moveTo(ref["lefthip"][0], ref["lefthip"][1]);
-        ctx.lineTo(ref["righthip"][0], ref["righthip"][1]);
+        ctx.moveTo(ref["leftHip"][0], ref["leftHip"][1]);
+        ctx.lineTo(ref["rightHip"][0], ref["rightHip"][1]);
         ctx.closePath();
         ctx.stroke();
 
 
         // right knee to right ankle
         ctx.beginPath();
-        ctx.moveTo(ref["rightknee"][0], ref["rightknee"][1]);
-        ctx.lineTo(ref["rightankle"][0], ref["rightankle"][1]);
+        ctx.moveTo(ref["rightKnee"][0], ref["rightKnee"][1]);
+        ctx.lineTo(ref["rightAnkle"][0], ref["rightAnkle"][1]);
         ctx.closePath();
         ctx.stroke();
 
 
         // left shoulder to left elbow
         ctx.beginPath();
-        ctx.moveTo(ref["leftshoulder"][0], ref["leftshoulder"][1]);
-        ctx.lineTo(ref["leftelbow"][0], ref["leftelbow"][1]);
+        ctx.moveTo(ref["leftShoulder"][0], ref["leftShoulder"][1]);
+        ctx.lineTo(ref["leftElbow"][0], ref["leftElbow"][1]);
         ctx.closePath();
         ctx.stroke();
 
         // left shoulder to left hip
         ctx.beginPath();
-        ctx.moveTo(ref["leftshoulder"][0], ref["leftshoulder"][1]);
-        ctx.lineTo(ref["lefthip"][0], ref["lefthip"][1]);
+        ctx.moveTo(ref["leftShoulder"][0], ref["leftShoulder"][1]);
+        ctx.lineTo(ref["leftHip"][0], ref["leftHip"][1]);
         ctx.closePath();
     
 
@@ -89,37 +89,37 @@
 
         // left shoulder to right shoulder
         ctx.beginPath();
-        ctx.moveTo(ref["leftshoulder"][0], ref["leftshoulder"][1]);
-        ctx.lineTo(ref["rightshoulder"][0], ref["rightshoulder"][1]);
+        ctx.moveTo(ref["leftShoulder"][0], ref["leftShoulder"][1]);
+        ctx.lineTo(ref["rightShoulder"][0], ref["rightShoulder"][1]);
         ctx.closePath();
         ctx.stroke();
 
 
         // // right shoulder to right elbow
         ctx.beginPath();
-        ctx.moveTo(ref["rightshoulder"][0], ref["rightshoulder"][1]);
-        ctx.lineTo(ref["rightelbow"][0], ref["rightelbow"][1]);
+        ctx.moveTo(ref["rightShoulder"][0], ref["rightShoulder"][1]);
+        ctx.lineTo(ref["rightElbow"][0], ref["rightElbow"][1]);
         ctx.closePath();
         ctx.stroke();
 
         // right shoulder to right hip
         ctx.beginPath();
-        ctx.moveTo(ref["rightshoulder"][0], ref["rightshoulder"][1]);
-        ctx.lineTo(ref["righthip"][0], ref["righthip"][1]);
+        ctx.moveTo(ref["rightShoulder"][0], ref["rightShoulder"][1]);
+        ctx.lineTo(ref["rightHip"][0], ref["rightHip"][1]);
         ctx.closePath();
         ctx.stroke();
 
         // right elbow to right wrist
         ctx.beginPath();
-        ctx.moveTo(ref["righteblow"][0], ref["righteblow"][1]);
-        ctx.lineTo(ref["rightwrist"][0], ref["rightwrist"][1]);
+        ctx.moveTo(ref["rightElbow"][0], ref["rightElbow"][1]);
+        ctx.lineTo(ref["rightWrist"][0], ref["rightWrist"][1]);
         ctx.closePath();
         ctx.stroke();
 
         // left elbow to left wrist
         ctx.beginPath();
-        ctx.moveTo(ref["leftelbow"][0], ref["leftelbow"][1]);
-        ctx.lineTo(ref["leftwrist"][0], ref["leftwrist"][1]);
+        ctx.moveTo(ref["leftElbow"][0], ref["leftElbow"][1]);
+        ctx.lineTo(ref["leftWrist"][0], ref["leftWrist"][1]);
         ctx.closePath();
         ctx.stroke();
 
